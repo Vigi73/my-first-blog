@@ -10,7 +10,7 @@
                 <p>Опубликовано: {{ post.published_date }}</p>
             </div>
             <h1><a href="{% url 'post_detail_url' pk=post.pk %}">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaksbr }}</p>
+            <p>{{ post.text|truncatewords:20 }}</p>
         </div>
     {% endfor %}
 
